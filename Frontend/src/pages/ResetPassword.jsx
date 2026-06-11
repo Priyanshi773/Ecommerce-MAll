@@ -22,7 +22,7 @@ export default function ResetPassword() {
 
         alert(res.data.message);
 
-         navigate("/login");
+         navigate("/LoginPage");
 
     };
 

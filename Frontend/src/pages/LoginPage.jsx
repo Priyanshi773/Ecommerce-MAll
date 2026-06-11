@@ -5,20 +5,44 @@ import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
 
-    const navigate  = useNavigate();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const Login = async () => {
-        await axios.post("http://localhost:3000/api/auth/Login", {
-            email,
-            password
-        });
-        alert("Login successfully");
+        try {
+         const res =   await axios.post("http://localhost:3000/api/auth/Login", {
+                email,
+                password
+            });
+           
+            alert(res.data.message || "Login successfully");
 
-        setEmail("");
-        setPassword("");
+            navigate("/Homepage");
+
+            setEmail("");
+            setPassword("");
+
+        } catch (err) {
+
+           const msg = err.response?.data?.message;
+
+             console.log("LOGIN ERROR:", msg);
+
+
+           if( msg === "Invalid email"){
+        alert("Invalid Email");
+        }
+        
+        else if(msg === "Invalid password"){
+              alert("Invalid password");
+        }
+
+        else {
+            alert("something went wrong ");
+        }
+    }
 
     };
 
@@ -29,7 +53,7 @@ export default function LoginPage() {
             <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-2xl flex flex-col gap-4 w-96">
 
                 <h1 className="text-3xl font-bold text-center text-blue-900">
-                   Login 
+                    Login
                 </h1>
 
                 <input
@@ -52,14 +76,14 @@ export default function LoginPage() {
                     onClick={Login}
                     className="bg-blue-600 text-2xl text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
                 >
-                   Login
+                    Login
                 </button>
 
                 <button
                     onClick={() => navigate("/forgot-password")}
                     className="bg-blue-600 text-2xl text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
                 >
-                   Forgot Password  
+                    Forgot Password
                 </button>
             </div>
         </div >

@@ -1,23 +1,51 @@
 import { useState } from "react";
 import axios from "axios";
 import blue from "../assets/blue.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const register = async () => {
-    await axios.post("http://localhost:3000/api/auth/register", {
+    try {
+    const res  =  await axios.post("http://localhost:3000/api/auth/register", {
       username,
       email,
       password,
     });
-    alert("registered");
+
+    navigate("/Homepage");
 
     setUsername("");
     setEmail("");
     setPassword("");
+  }
+
+    catch(err){
+      
+      const msg  = err.response?.data?.message; 
+
+      console.log( "Register Error :" , msg  );
+
+      if( msg === "username or email already exists"){
+           alert( "Email or username already exists"); 
+      }
+     
+      if( msg === "username already exists"){
+           alert( "username already exists"); 
+      }
+     
+      if( msg === "email already exists"){
+           alert( "Email  already exist"); 
+      }
+
+    }
+  
   };
 
   return (

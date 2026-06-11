@@ -15,11 +15,26 @@ export async function register(req, res) {
             { email }
         ]
     })
+   
+    if(isAlreadyRegistered){
 
-    if (isAlreadyRegistered) {
-       return res.status(409).json({
+        if (isAlreadyRegistered.email === email && isAlreadyRegistered.username === username) {
+        return res.status(409).json({
             message: "username or email already exists"
         })
+    }
+
+    if (isAlreadyRegistered.email === email) {
+        return res.status(409).json({
+            message: " email already exists"
+        })
+    }
+
+    if (isAlreadyRegistered.username === username) {
+        return res.status(409).json({
+            message: " username  already exists"
+        })
+    }
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -39,10 +54,10 @@ export async function register(req, res) {
     )
 
     res.cookie("token", token, {
-    httpOnly: true,
-    secure: false,
-    maxAge: 24 * 60 * 60 * 1000
-});
+        httpOnly: true,
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000
+    });
 
 
     res.status(201).json({
@@ -51,7 +66,7 @@ export async function register(req, res) {
             username: user.username,
             email: user.email,
         },
-        
+
     })
 
 }
@@ -88,11 +103,11 @@ export async function Login(req, res) {
     const user = await UserModel.findOne({
         email
     })
-      
-    if(!user){
-       return res.status(401).json({
-        message: "Invalid credentials"
-    });
+
+    if (!user) {
+        return res.status(401).json({
+            message: "Invalid email "
+        });
     }
 
     const isMatch = await bcrypt.compare(
@@ -100,10 +115,10 @@ export async function Login(req, res) {
         user.password
     );
 
-    if(!isMatch){
-     return res.status(401).json({
-        message: "Invalid password"
-    });
+    if (!isMatch) {
+        return res.status(401).json({
+            message: "Invalid password"
+        });
     }
 
     const token = jwt.sign(
@@ -115,12 +130,12 @@ export async function Login(req, res) {
             expiresIn: "1d"
         }
     );
-    
+
     res.cookie("token", token, {
-    httpOnly: true,
-    secure: false,
-    maxAge: 24 * 60 * 60 * 1000
-});
+        httpOnly: true,
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000
+    });
 
     return res.status(200).json({
         message: "Login successful",
@@ -131,51 +146,51 @@ export async function Login(req, res) {
     });
 }
 
-export async function Logout(req , res){
+export async function Logout(req, res) {
 
     res.clearCookie("token");
 
-  return res.status(200).json({
-    message: "Logged out successfully",
-  });
+    return res.status(200).json({
+        message: "Logged out successfully",
+    });
 
 }
 
-export async function ResetPassword(req ,res){
+export async function ResetPassword(req, res) {
 
-    const {email , newPassword} = req.body ;
+    const { email, newPassword } = req.body;
 
     if (!email || !newPassword) {
-    return res.status(400).json({
-      message: "Email and new password required",
+        return res.status(400).json({
+            message: "Email and new password required",
+        });
+    }
+
+    const record = await OtpModel.findOne({ email });
+
+    if (!record || !record.verified) {
+        return res.status(400).json({
+            message: "OTP not verified",
+        });
+    }
+
+    const user = await UserModel.findOne({ email });
+
+    if (!user) {
+        return res.status(404).json({
+            message: "User not found",
+        });
+    }
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    user.password = hashedPassword;
+    await user.save();
+
+    await OtpModel.deleteMany({ email });
+
+    return res.status(200).json({
+        message: "Password reset successful",
     });
-  }
-
-   const record = await OtpModel.findOne({ email });
-
-  if (!record || !record.verified) {
-    return res.status(400).json({
-      message: "OTP not verified",
-    });
-  }
-
-  const user = await UserModel.findOne({ email });
-
-  if (!user) {
-    return res.status(404).json({
-      message: "User not found",
-    });
-  }
-
-  const hashedPassword = await bcrypt.hash(newPassword, 10);
-
-  user.password = hashedPassword;
-  await user.save();
-
-  await OtpModel.deleteMany({ email });
-
-  return res.status(200).json({
-    message: "Password reset successful",
-  });
 
 }
