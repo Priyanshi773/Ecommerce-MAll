@@ -3,7 +3,7 @@ import dress from "../assets/dress.jpg";
 import food from "../assets/food.jpg";
 import game from "../assets/game.jpg";
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
 
@@ -27,7 +27,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex flex-col items-center py-10">
 
-       {/* Logout Button */}
+      {/* Logout Button */}
       <div className="w-full flex justify-end px-6">
         <button
           onClick={logout}
@@ -46,7 +46,7 @@ const HomePage = () => {
       <div className="flex gap-16 justify-center flex-wrap mt-4 ">
 
         {/* Card 1 */}
-        <div className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
+        <div onClick={() => navigate("/Dresses")} className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
                 transition-all duration-300 ">
           <img src={dress} className="w-full h-140 object-cover" />
           <div className="p-4">

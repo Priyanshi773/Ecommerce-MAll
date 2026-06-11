@@ -5,6 +5,8 @@ import LoginPage from "./pages/LoginPage";
 import ForgotPassword from "./pages/ForgotPasswordPage";
 import ResetPassword from "./pages/ResetPassword";
 import HomePage from "./pages/HomePage";
+import Dresses from "./Product/Dresses/Dresses";
+import ZARA from "./Product/Dresses/ZARA";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/Homepage" element={<HomePage />} />
+      <Route path="/Dresses" element={<Dresses/>} />
+      <Route path="/ZARA" element={<ZARA/>} />
       
 
 
