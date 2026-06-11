@@ -23,7 +23,7 @@ export const Dresses = () => {
             </div>
     
             {/* Card 2 */}
-            <div className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
+            <div onClick={() => navigate("/HM")}className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
                     transition-all duration-300 ">
               <img src={HM} className="w-full h-140 object-cover" />
               <div className="p-4">

@@ -7,6 +7,7 @@ import ResetPassword from "./pages/ResetPassword";
 import HomePage from "./pages/HomePage";
 import Dresses from "./Product/Dresses/Dresses";
 import ZARA from "./Product/Dresses/ZARA";
+import HM from "./Product/Dresses/HM";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/Homepage" element={<HomePage />} />
       <Route path="/Dresses" element={<Dresses/>} />
       <Route path="/ZARA" element={<ZARA/>} />
+      <Route path="/HM" element={<HM/>} />
       
 
 
