@@ -8,6 +8,12 @@ import HomePage from "./pages/HomePage";
 import Dresses from "./Product/Dresses/Dresses";
 import ZARA from "./Product/Dresses/ZARA";
 import HM from "./Product/Dresses/HM";
+import Food from "./Product/Food/Food";
+import Dominos from "./Product/Food/Dominos";
+import Burger from "./Product/Food/Burger";
+import Game from "./Product/Game/Game";
+import Arcade from "./Product/Game/Arcade";
+import Vr from "./Product/Game/Vr";
 
 function App() {
   return (
@@ -22,8 +28,13 @@ function App() {
       <Route path="/Dresses" element={<Dresses/>} />
       <Route path="/ZARA" element={<ZARA/>} />
       <Route path="/HM" element={<HM/>} />
-      
-
+      <Route path="/Food" element={<Food/>} />
+      <Route path="/Dominos" element={<Dominos/>} />
+      <Route path="/burger" element={<Burger/>} />
+      <Route path="/Game" element={<Game/>} />
+      <Route path="/Arcade" element={<Arcade/>} />
+      <Route path="/VR" element={<Vr/>} />
+    
 
     </Routes>
     

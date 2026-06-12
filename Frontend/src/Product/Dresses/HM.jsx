@@ -22,53 +22,73 @@ export const HM = () => {
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm1} className="w-full h-80 object-cover" />
           <div className="p-4">
-            <h2 className="text-xl font-semibold">Floral Dress</h2>
-            <p className="text-gray-600">₹1999</p>
+            <h2 className="text-2xl font-bold">👗 Western A-Line Dress</h2>
+    <p className="text-gray-800">
+      A trendy A-line dress with a flattering fit and modern silhouette.
+      Perfect for college wear, outings, and weekend plans.
+    </p>
+    <p className="text-gray-600 text-2xl font-bold">₹1,599</p>
           </div>
         </div>
 
         {/* Card 2 */}
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm2} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-xl font-semibold">Summer Dress</h2>
-            <p className="text-gray-600">₹2499</p>
-          </div>
+           <h2 className="text-2xl font-bold">🌷 Wrap Dress</h2>
+    <p className="text-gray-800">
+      A stylish wrap dress designed to enhance your silhouette with elegance.
+      Ideal for office wear, dinners, and casual outings.
+    </p>
+    <p className="text-gray-600 text-2xl font-bold">₹1,799</p>
         </div>
 
         {/* Card 3 */}
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm3} className="w-full h-80 object-cover" />
           <div className="p-4">
-            <h2 className="text-xl font-semibold">Party Dress</h2>
-            <p className="text-gray-600">₹2999</p>
+            <h2 className="text-2xl font-bold">✨ Satin Midi Dress</h2>
+    <p className="text-gray-800">
+      A luxurious satin midi dress with a smooth finish and elegant flow.
+      Perfect for parties, dinners, and festive occasions.
+    </p>
+    <p className="text-gray-600 text-2xl font-bold">₹2,499</p>
           </div>
         </div>
 
-         {/* Card 3 */}
+         {/* Card 4 */}
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm4} className="w-full h-80 object-cover" />
           <div className="p-4">
-            <h2 className="text-xl font-semibold">Party Dress</h2>
-            <p className="text-gray-600">₹2999</p>
+           <h2 className="text-2xl font-bold">👚 Printed Casual Top</h2>
+    <p className="text-gray-800">
+      A trendy printed top with a modern design and comfortable fit.
+      Perfect for college wear, casual outings, and weekend plans.
+    </p>
+    <p className="text-gray-600 text-2xl font-bold">₹699</p>
           </div>
         </div>
 
-         {/* Card 3 */}
+         {/* Card 5*/}
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm5} className="w-full h-80 object-cover" />
           <div className="p-4">
-            <h2 className="text-xl font-semibold">Party Dress</h2>
-            <p className="text-gray-600">₹2999</p>
+            <h2 className="text-2xl font-bold">🎀 Puff Sleeve Top</h2>
+            <p className="text-gray-800" >Elegant puff-sleeve top that adds a fashionable touch to your wardrobe.
+               Ideal for brunches, parties, and special occasions.</p>
+            <p className="text-gray-600 text-2xl font-bold">₹999</p>
           </div>
         </div>
 
-         {/* Card 3 */}
+         {/* Card 6 */}
         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
           <img src={hm6} className="w-full h-80 object-cover" />
           <div className="p-4">
-            <h2 className="text-xl font-semibold">Party Dress</h2>
-            <p className="text-gray-600">₹2999</p>
+           <h2 className="text-2xl font-bold">☀️ Sleeveless Summer Dress</h2>
+    <p className="text-gray-800">
+      Lightweight and breathable summer dress designed for ultimate comfort.
+      Perfect for hot days, vacations, and casual outings.
+    </p>
+    <p className="text-gray-600 text-2xl font-bold">₹1,299</p>
           </div>
         </div>
 

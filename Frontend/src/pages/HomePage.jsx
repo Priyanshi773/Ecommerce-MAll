@@ -55,7 +55,7 @@ const HomePage = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
+        <div onClick={() => navigate("/Food")} className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
                 transition-all duration-300 ">
           <img src={food} className="w-full h-140 object-cover" />
           <div className="p-4">
@@ -64,7 +64,7 @@ const HomePage = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
+        <div  onClick={() => navigate("/Game")} className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
                 transition-all duration-300">
           <img src={game} className="w-full h-140 object-cover" />
           <div className="p-4">
