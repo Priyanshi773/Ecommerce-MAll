@@ -49,20 +49,16 @@ export default function Register() {
   };
 
   return (
-    <div className="h-screen w-full flex flex-row bg-cover items-center justify-center gap-4"
-      style={{ backgroundImage: `url(${blue})` }}>
-
-      <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-2xl flex flex-col gap-4 w-96">
-
-        <h1 className="text-3xl font-bold text-center text-blue-900">
-          Register
-        </h1>
+     <div className="h-screen w-full flex flex-row bg-blue-500 items-center justify-center gap-4">
+     <div className="w-[450px] min-h-[500px] bg-white rounded-xl shadow-2xl">
+       <h1 className="mt-10 text-center font-bold text-4xl ">Register</h1>
+      <div className="flex flex-col items-center gap-6 mt-10 ">
 
         <input
           type="text"
           placeholder="Username"
           value={username}
-          className="p-5 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-96 px-4 py-4 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setUsername(e.target.value)}
         />
 
@@ -70,7 +66,7 @@ export default function Register() {
           type="email"
           placeholder="Email"
           value={email}
-          className="p-5 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-96 px-4 py-4 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -78,18 +74,18 @@ export default function Register() {
           type="password"
           placeholder="Password"
           value={password}
-          className="p-5 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-96 px-4 py-4 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button
-          onClick={register}
-          className="bg-blue-600 text-xl  text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-        >
-          Register
-        </button>
-
+         <button
+                    onClick={register}
+                    className="w-48 px-8 py-6 bg-blue-700 text-2xl text-white rounded-xl"
+                >
+                    Register
+                </button>
       </div>
-    </div>
+     </div>
+     </div>
   );
 }
