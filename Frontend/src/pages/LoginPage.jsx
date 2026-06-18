@@ -43,7 +43,7 @@ export default function LoginPage() {
         }
     }
 
-    };
+}
 
     return (
       <div className="h-screen w-full flex flex-row bg-blue-500 items-center justify-center gap-4">

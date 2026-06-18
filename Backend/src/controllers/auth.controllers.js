@@ -73,6 +73,9 @@ export async function register(req, res) {
 
 export async function Getme(req, res) {
 
+    console.log("COOKIE HEADER:", req.headers.cookie);
+    console.log("COOKIES:", req.cookies);
+
     const token = req.cookies.token;
 
     if (!token) {
@@ -134,6 +137,7 @@ export async function Login(req, res) {
     res.cookie("token", token, {
         httpOnly: true,
         secure: false,
+        sameSite: "lax",
         maxAge: 24 * 60 * 60 * 1000
     });
 

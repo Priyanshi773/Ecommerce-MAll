@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect , useState} from "react";
 import dress from "../assets/dress.jpg";
 import food from "../assets/food.jpg";
 import game from "../assets/game.jpg";
@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 const HomePage = () => {
 
   const navigate = useNavigate();
+
+  const [user, setUser] = useState(null);
 
   const logout = async () => {
     try {
@@ -25,7 +27,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex flex-col items-center py-10">
+    <div className="min-h-screen w-full bg-gray-200 flex flex-col items-center py-10">
 
       {/* Logout Button */}
       <div className="w-full flex justify-end px-6">
@@ -38,8 +40,8 @@ const HomePage = () => {
       </div>
 
       {/* Heading */}
-      <h1 className="text-7xl font-black uppercase tracking-widest text-indigo-900 drop-shadow-lg mb-12">
-        Welcome to Mallora
+      <h1 className="text-6xl font-black uppercase font-serif drop-shadow-lg mb-12">
+        MallNest 🏢
       </h1>
 
       {/* Cards Row */}
@@ -64,7 +66,7 @@ const HomePage = () => {
         </div>
 
         {/* Card 3 */}
-        <div  onClick={() => navigate("/Game")} className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
+        <div onClick={() => navigate("/Game")} className="w-100 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 
                 transition-all duration-300">
           <img src={game} className="w-full h-140 object-cover" />
           <div className="p-4">

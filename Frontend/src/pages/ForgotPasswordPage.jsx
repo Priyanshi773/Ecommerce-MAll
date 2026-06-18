@@ -48,7 +48,7 @@ export default function ForgotPassword() {
 
     return (
          <div className="h-screen w-full flex flex-row bg-blue-500 items-center justify-center gap-4">
-        <div className="w-[450px] min-h-[350px] bg-white rounded-xl shadow-2xl">
+        <div className="w-[450px] min-h-[550px] bg-white rounded-xl shadow-2xl">
             <h1 className="mt-10 text-center font-bold text-4xl ">Forgot Password</h1>
             <div className="flex flex-col items-center gap-6 mt-10 ">
 
@@ -73,13 +73,13 @@ export default function ForgotPassword() {
                             type="text"
                             placeholder="Enter OTP"
                             value={otp}
-                            className="p-3 rounded-lg border border-gray-300"
+                            className="w-96 px-4 py-4 rounded-lg text-2xl font-bold border border-black-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onChange={(e) => setOtp(e.target.value)}
                         />
 
                         <button
                             onClick={verifyOTP}
-                            className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+                            className="w-48 px-8 py-6 bg-blue-700 text-2xl text-white rounded-xl"
                         >
                             Verfiy
                         </button>

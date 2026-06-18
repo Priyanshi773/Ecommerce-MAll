@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import blue from "../assets/blue.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
