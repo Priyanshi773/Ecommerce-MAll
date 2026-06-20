@@ -22,8 +22,12 @@ const Burger = () => {
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">Korean Kimchi Veg Whopper</h2>
                         <p className="text-gray-800" >The Korean Kimchi Paneer Burger is a popular, limited-time menu item from Burger King India. 
-                            It features a crispy paneer patty dunked in a sweet-and-spicy Korean glaze, layered with sesame mayo and tangy kimchi, and served on a toasted premium brioche bun</p>
+                            It features a crispy paneer patty dunked in a sweet-and-spicy Korean glaze, and served on a toasted premium brioche bun</p>
                         <p className="text-gray-600 text-2xl font-bold">₹199/- </p>
+                        <button className="mt-6 flex items-center justify-center gap-2 text-white px-8 py-2 rounded-lg bg-gray-800 transition ">
+                           Add to Cart
+                        </button>
+                        
                     </div>
                 </div>
 
@@ -36,6 +40,9 @@ const Burger = () => {
                         authentic Korean flavor profiles. It is notoriously saucy, packed with heat,
                          and balanced by a tangy-sweet kimchi sauce. </p>
                         <p className="text-gray-600  text-2xl font-bold">₹69/- </p>
+                                                <button className="mt-6 flex items-center justify-center gap-2 text-white px-8 py-2 rounded-lg bg-gray-800 transition ">
+                           Add to Cart
+                        </button>
                     </div>
                 </div>
 
@@ -48,6 +55,9 @@ const Burger = () => {
                              budget-friendly burger featuring two crunchy, golden-fried vegetable 
                              patties layered with fresh onions, creamy mayo, and signature sauces, all served in a soft premium bun </p>
                         <p className="text-gray-600  text-2xl font-bold ">₹89/- </p>
+                                                <button className="mt-6 flex items-center justify-center gap-2 text-white px-10 py-2 rounded-lg bg-gray-800 transition ">
+                           Add to Cart
+                        </button>
                     </div>
                 </div>
 

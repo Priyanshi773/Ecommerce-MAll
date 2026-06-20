@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaStar , FaShoppingCart} from 'react-icons/fa';
 import dress1 from "../../assets/dress1.avif";
 import dress2 from "../../assets/dress2.avif";
 import dress3 from "../../assets/dress3.avif";
@@ -15,84 +16,163 @@ export const ZARA = () => {
         ZARA Dresses Collection 👗
       </h1>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      {/* Grid */}     
+      <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress1} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">✨ Elegant Party Dress</h2>
-            <p className="text-gray-800">
-              A stunning party wear dress crafted with premium fabric and a modern silhouette.
-              Ideal for celebrations, evening events, and special occasions.
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress1} className="w-full h-96 object-cover object-top" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+              ✨ Elegant Party Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹2,299</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>4.8</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $3950
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress2} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">💃 Maxi Evening Dress</h2>
-            <p className="text-gray-800">
-              A flowy maxi dress featuring a graceful design and comfortable fit.
-              Perfect for festive occasions, dinners, and elegant outings.
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress2} className="w-full h-96 object-cover object-bottom" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+             💃 Maxi Evening Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹1,899</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>4.2</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $2950
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress3} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">🌟 A-Line Western Dress</h2>
-            <p className="text-gray-800">
-              Trendy A-line dress with a flattering fit and contemporary style.
-              Great for college events, casual outings, and weekend plans.
+         <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress3} className="w-full h-96 object-cover object-bottom" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+             🎀 Satin Midi Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹1,699</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>4.4</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $2999
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 
-        {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress4} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">🎀 Satin Midi Dress</h2>
-            <p className="text-gray-800">
-              Luxurious satin midi dress that combines sophistication and comfort.
-              Ideal for date nights, parties, and special celebrations.
+
+        {/* Card 4 */}
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress4} className="w-full h-96 object-cover object-bottom" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+             🌟 A-Line Western Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹2,499</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>4.6</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $4950
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 
-        {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress5} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">🌹 Off-Shoulder Dress</h2>
-            <p className="text-gray-800">
-              A chic off-shoulder dress that adds elegance and confidence to your look.
-              Perfect for parties, dinners, and special occasions.
+        {/* Card 5 */}
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress5} className="w-full h-96 object-cover object-top" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+             🌹 Off-Shoulder Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹1,799</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>4.2</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $1999
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 
-        {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-          <img src={dress6} className="w-full h-80 object-cover" />
-          <div className="p-4">
-            <h2 className="text-2xl font-bold">☀️ Sleeveless Summer Dress</h2>
-            <p className="text-gray-800">
-              Lightweight and breathable, this sleeveless dress is perfect for warm days,
-              beach outings, and summer adventures.
+        {/* Card 6*/}
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+          <img src={dress6} className="w-full h-96 object-cover object-bottom" />
+
+          <div className="p-5 flex flex-col gap-3">
+
+            <p className="font-bold text-2xl">
+             ☀️ Sleeveless Summer Dress
             </p>
-            <p className="text-gray-600 text-2xl font-bold">₹1,199</p>
+
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <FaStar className="text-yellow-500" />
+              <p>5.0</p>
+            </div>
+
+            <p className="text-2xl font-bold text-gray-800">
+              $4599
+            </p>
+
+            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              <FaShoppingCart className="text-lg" />
+              Add to Cart
+            </button>
           </div>
         </div>
 

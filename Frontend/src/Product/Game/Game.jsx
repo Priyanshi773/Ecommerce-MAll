@@ -7,7 +7,7 @@ export const Game = () => {
 
     const navigate = useNavigate();
     return (
-        <div className='min-h-screen w-full bg-gradient-to-br from-slate-50 to via-blue-50 to-indigo-100 flex flex-col items-center  py-10'>
+        <div className='min-h-screen w-full bg-gradient-to-br from-slate-50 to via-blue-50 to-blue-200 flex flex-col items-center  py-10'>
 
             <div className="flex gap-16 justify-center flex-wrap mt-4">
 

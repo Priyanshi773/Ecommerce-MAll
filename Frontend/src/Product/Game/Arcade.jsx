@@ -14,42 +14,45 @@ const Arcade = () => {
             </h1>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="ml-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
                 {/* Card 1 */}
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-                    <img src={ar1} className="w-full h-80 object-cover" />
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black">
+                    <img src={ar1} className="w-full h-2/3 object-cover" />
+
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">Left Survive </h2>
-                        <p className="text-gray-800" >Experience thrilling target shooting challenges
-                            with interactive digital shooting games. Improve your aim, score points,
-                            and compete for the highest score in an action-packed environment.</p>
                         <p className="text-gray-600 text-2xl font-bold"> Price: ₹250 per session </p>
+                        <button className="mt-6 flex items-center justify-center gap-2 text-white px-8 py-2 rounded-lg bg-gray-800 transition ">
+                            Book a Session
+                        </button>
                     </div>
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-                    <img src={ar2} className="w-full h-80 object-cover" />
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+                    <img src={ar2} className="w-full h-2/3 object-cover" />
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">Bowling</h2>
-                        <p className="text-gray-800"> Test your accuracy and skills in our modern bowling
-                            arena. Knock down all the pins, compete
-                            with friends, and enjoy a fun-filled bowling experience suitable for all ages.. </p>
                         <p className="text-gray-600  text-2xl font-bold">Price:  ₹300 per game (1 player) </p>
+                        <button className="mt-6 flex items-center justify-center gap-2 text-white px-8 py-2 rounded-lg bg-gray-800 transition ">
+                            Book a Session
+                        </button>
                     </div>
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition">
-                    <img src={ar3} className="w-full h-80 object-cover" />
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+                    <img src={ar3} className="w-full h-2/3 object-cover" />
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">Claw Machine</h2>
-                        <p className="text-gray-800"> Try your luck and grab exciting toys, plushies, and surprise prizes from our claw machines.
-                            A fun and entertaining game that rewards both skill and patience.</p>
                         <p className="text-gray-600  text-2xl font-bold ">Price: ₹50 per attempt </p>
+                        <button className="mt-6 flex items-center justify-center gap-2 text-white px-8 py-2 rounded-lg bg-gray-800 transition ">
+                            Book a Session
+                        </button>
                     </div>
                 </div>
+
 
             </div>
         </div>

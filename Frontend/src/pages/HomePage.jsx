@@ -98,7 +98,7 @@ const HomePage = () => {
           </div>
 
           {/* BOX 2 */}
-          <div onClick={()=> navigate("/Food")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
+          <div onClick={()=> navigate("/Game")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={ent} alt="logo" className="w-40" />
@@ -110,7 +110,7 @@ const HomePage = () => {
           </div>
 
           {/* BOX 3 */}
-          <div onClick={()=> navigate("/Game")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
+          <div onClick={()=> navigate("/Food")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={foodl} alt="logo" className="w-40" />
@@ -136,7 +136,7 @@ const HomePage = () => {
         </div>
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-pink-100 to-pink-200 ">
+        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-pink-50 to-pink-100 ">
           <div>
             <h1 className="text-7xl font-black mb-8 flex items-center justify-center">  Top-Tier Experience  </h1>
             <p className="text-2xl leading-8">
@@ -154,7 +154,7 @@ const HomePage = () => {
 
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-orange-100 to-orange-200 ">
+        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-orange-50 to-orange-100 ">
           <div>
             <h1 className="text-7xl font-black mb-8 flex items-center justify-center"> Fun City </h1>
             <p className="text-2xl leading-8">
@@ -186,7 +186,7 @@ const HomePage = () => {
         </div>
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-blue-100 to-blue-200 ">
+        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-green-30 to-green-50 ">
           <div>
             <h1 className="text-7xl font-black mb-8 flex items-center justify-center"> Fine Dine </h1>
             <p className="text-2xl leading-8">
@@ -199,7 +199,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className="w-full bg-gradient-to-b  text-black py-12 ">
+      <div className="w-full bg-blue-100  text-black py-12 ">
 
         <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 

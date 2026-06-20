@@ -7,7 +7,7 @@ export const Food = () => {
 
     const navigate = useNavigate();
     return (
-        <div className='min-h-screen w-full bg-gray-300 flex flex-col items-center  py-10'>
+        <div className='min-h-screen w-full bg-gradient-to-b bg-slate-50 via-blue-50 to-blue-100 flex flex-col items-center  py-10'>
 
             <div className="flex gap-16 justify-center flex-wrap mt-4">
 
