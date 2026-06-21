@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+
 import logo from "../assets/malllogo.png";
 import image1 from "../assets/image1.png";
 import shop1 from "../assets/shop1.png";
@@ -13,12 +14,17 @@ import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
 import image4 from "../assets/image4.png";
 
-
 const HomePage = () => {
 
   const navigate = useNavigate();
 
-  const [user, setUser] = useState(null);
+  // SCROLL FUNCTION
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const logout = async () => {
     try {
@@ -33,9 +39,12 @@ const HomePage = () => {
 
       alert("Logout failed");
     }
+
   };
 
+   
   return (
+
     <div className="font-serif">
 
       <div className="w-full h-[150px] bg-stone-50 flex items-center justify-between px-6">
@@ -45,15 +54,15 @@ const HomePage = () => {
         </div>
 
         <div className="ml-auto flex gap-10  text-black font-extrabold text-2xl pr-12 mr-14">
-          <p className=" hover:text-red-500 hover:underline cursor-pointer">Home</p> |
-          <p className=" hover:text-red-500 hover:underline cursor-pointer">Shopping</p> |
-          <p className=" hover:text-red-500 hover:underline cursor-pointer">Entertainment</p> |
-          <p className=" hover:text-red-500 hover:underline cursor-pointer">Indulgence</p> |
-          <p className=" hover:text-red-500 hover:underline cursor-pointer">Contact Us</p>
+          <p onClick={() => scrollToSection("Home")} className=" hover:text-red-500 hover:underline cursor-pointer">Home</p> |
+          <p onClick={() => scrollToSection("Shopping")} className=" hover:text-red-500 hover:underline cursor-pointer">Shopping</p> |
+          <p onClick={() => scrollToSection("Entertainment")} className=" hover:text-red-500 hover:underline cursor-pointer">Entertainment</p> |
+          <p onClick={() => scrollToSection("Indulgence")} className=" hover:text-red-500 hover:underline cursor-pointer">Indulgence</p> |
+          <p onClick={() => scrollToSection("Contact Us")} className=" hover:text-red-500 hover:underline cursor-pointer">Contact Us</p>
         </div>
       </div>
 
-      <div className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory">
+      <div  className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory">
 
         <img src={shop1} className="w-full h-[700px] flex-shrink-0 snap-center object-cover rounded-lg" />
 
@@ -63,7 +72,7 @@ const HomePage = () => {
 
       </div>
 
-      <div className="mt-6 h-screen bg-gradient-to-b from-stone-30 via-pink-100 to-pink-200">
+      <div id="Home" className="mt-6 h-screen bg-gradient-to-b from-stone-30 via-pink-100 to-pink-200">
 
         <div className="mt-4 text-6xl  flex items-center justify-center font-bold">
           Ambience Malls
@@ -83,8 +92,8 @@ const HomePage = () => {
 
         <div className="w-[90%] mx-auto flex justify-between gap-4 mt-30">
 
-          {/* BOX 1 */}
-          <div onClick={()=> navigate("/Dresses")}className="w-[500px] h-[400px] bg-white  p-6 rounded-4xl shadow-md">
+       {/* Shopping */}
+          <div  onClick={()=> navigate("/Dresses")}className="w-[500px] h-[400px] bg-white  p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={shopping} alt="logo" className="w-40" />
@@ -96,8 +105,8 @@ const HomePage = () => {
               trends and high-end products for a refined shopping experience.</p>
 
           </div>
-
-          {/* BOX 2 */}
+          
+          {/* Entertaiment */}
           <div onClick={()=> navigate("/Game")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
@@ -109,8 +118,8 @@ const HomePage = () => {
               ensuring a rejuvenating and stylish visit for all guests.</p>
           </div>
 
-          {/* BOX 3 */}
-          <div onClick={()=> navigate("/Food")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
+          {/* Indulegence  */}
+          <div  onClick={()=> navigate("/Food")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={foodl} alt="logo" className="w-40" />
@@ -125,7 +134,8 @@ const HomePage = () => {
       </div>
 
 
-      <div className="w-full h-screen flex">
+        {/* photo side by side section */}
+      <div id="Shopping" className="w-full h-screen flex">
 
         {/* LEFT SIDE IMAGE */}
         <div className="w-2/3">
@@ -150,11 +160,11 @@ const HomePage = () => {
 
       </div>
 
-      <div className="w-full h-screen flex">
+      <div  id="Indulgence" className="w-full h-screen flex">
 
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-orange-50 to-orange-100 ">
+        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-pink-50 to-pink-100 ">
           <div>
             <h1 className="text-7xl font-black mb-8 flex items-center justify-center"> Fun City </h1>
             <p className="text-2xl leading-8">
@@ -167,7 +177,7 @@ const HomePage = () => {
 
 
         {/* LEFT SIDE IMAGE */}
-        <div className="w-2/3">
+        <div id="Entertainment" className="w-2/3">
           <img
             src={image3}
             className="w-full h-full object-cover object-top"
@@ -186,7 +196,7 @@ const HomePage = () => {
         </div>
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-green-30 to-green-50 ">
+        <div className="w-1/2 flex items-center justify-center p-10 bg-gradient-to-b from-stone-30 via-pink-50 to-pink-100 ">
           <div>
             <h1 className="text-7xl font-black mb-8 flex items-center justify-center"> Fine Dine </h1>
             <p className="text-2xl leading-8">
@@ -198,8 +208,8 @@ const HomePage = () => {
         </div>
       </div>
 
-
-      <div className="w-full bg-blue-100  text-black py-12 ">
+     {/* Contact us  */}
+      <div id="Contact Us" className="w-full bg-gray-400  text-black py-12 ">
 
         <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState }from 'react'
 import { FaStar, FaShoppingCart } from 'react-icons/fa';
 import hm1 from "../../assets/hm1.webp";
 import hm2 from "../../assets/hm2.webp";
@@ -8,6 +8,19 @@ import hm5 from "../../assets/hm5.webp";
 import hm6 from "../../assets/hm6.webp";
 
 export const HM = () => {
+
+  const [toast, setToast] = useState(false);
+  const [message, setMessage] = useState("");
+
+   const showToast = (msg) => {
+    setMessage(msg);
+    setToast(true);
+
+    setTimeout(() => {
+      setToast(false);
+    }, 2000);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-6">
 
@@ -20,7 +33,7 @@ export const HM = () => {
       <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
 
         {/* Card 1 */}
-        <div  className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
           <img src={hm1} className="w-full h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
@@ -38,7 +51,7 @@ export const HM = () => {
               $999
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button  onClick={() => showToast(" added to cart 🛍️")}  className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -64,7 +77,7 @@ export const HM = () => {
               $1599
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button onClick={() => showToast(" added to cart 🛍️")} className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -91,7 +104,7 @@ export const HM = () => {
               $1299
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button onClick={() => showToast(" added to cart 🛍️")} className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -117,7 +130,7 @@ export const HM = () => {
               $999
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button onClick={() => showToast(" added to cart 🛍️")} className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -143,7 +156,7 @@ export const HM = () => {
               $799
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button onClick={() => showToast(" added to cart 🛍️")} className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -169,7 +182,7 @@ export const HM = () => {
               $1999
             </p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button onClick={() => showToast(" added to cart 🛍️")} className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -179,6 +192,15 @@ export const HM = () => {
 
 
       </div>
+
+         {/* ✅ TOAST UI */}
+      {toast && (
+        <div
+          className="fixed bottom-5 right-5 bg-black text-white px-10 py-5 rounded-lg shadow-lg z-50"
+        >
+          {message}
+        </div>
+      )}
     </div>
 
   )
