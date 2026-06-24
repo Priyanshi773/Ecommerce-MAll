@@ -14,10 +14,13 @@ import Burger from "./Product/Food/Burger";
 import Game from "./Product/Game/Game";
 import Arcade from "./Product/Game/Arcade";
 import Vr from "./Product/Game/Vr";
+import Cart from "./Product/Dresses/Cart";
+import { CartProvider } from "./Product/Dresses/CartContext";
 
 function App() {
   return (
    
+    <CartProvider>
     <Routes>
       <Route path="/" element={<LandingPage/>}></Route>
       <Route path="/RegisterPage" element={<RegisterPage/>}></Route>
@@ -34,9 +37,10 @@ function App() {
       <Route path="/Game" element={<Game/>} />
       <Route path="/Arcade" element={<Arcade/>} />
       <Route path="/VR" element={<Vr/>} />
-    
-
+      <Route path="/Cart" element={<Cart/>} />
+  
     </Routes>
+    </CartProvider>
     
   );
 }

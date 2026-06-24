@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../assets/malllogo.png";
 import image1 from "../assets/image1.png";
@@ -42,12 +42,12 @@ const HomePage = () => {
 
   };
 
-   
+
   return (
 
     <div className="font-serif">
 
-      <div className="w-full h-[150px] bg-stone-50 flex items-center justify-between px-6">
+      <div className="fixed w-full h-[150px] bg-stone-50 flex items-center justify-between px-6">
 
         <div className="flex items-center justify-center w-[600px]">
           <img src={logo} alt="logo" className="h-32 w-32" />
@@ -62,11 +62,11 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div  className="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory">
+      <div className="flex overflow-x-auto  scroll-smooth snap-x snap-mandatory">
 
-        <img src={shop1} className="w-full h-[700px] flex-shrink-0 snap-center object-cover rounded-lg" />
+        <img src={shop1} className="w-full h-[700px] flex-shrink-0 snap-center object-cover object-top rounded-lg" />
 
-        <img src={shop2} className="w-full h-[700px] flex-shrink-0 snap-center object-cover rounded-lg" />
+        <img src={shop2} className="w-full h-[700px] flex-shrink-0 snap-center object-cover  rounded-lg" />
 
         <img src={shop3} className="w-full h-[700px] flex-shrink-0 snap-center object-cover rounded-lg" />
 
@@ -90,13 +90,17 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-30">
+        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-25">
 
-       {/* Shopping */}
-          <div  onClick={()=> navigate("/Dresses")}className="w-[500px] h-[400px] bg-white  p-6 rounded-4xl shadow-md">
+          {/* Shopping */}
+          <div onClick={() => navigate("/Dresses")} className="w-[500px] h-[450px] bg-white  p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={shopping} alt="logo" className="w-40" />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button className="text-xl font-bold bg-red-600 text-white px-4 py-2 mt-2 rounded-xl">Click</button>
             </div>
 
             <h2 className="mt-2 text-2xl font-extrabold flex items-center justify-center mb-2">Fashion & Luxury </h2>
@@ -105,12 +109,16 @@ const HomePage = () => {
               trends and high-end products for a refined shopping experience.</p>
 
           </div>
-          
+
           {/* Entertaiment */}
-          <div onClick={()=> navigate("/Game")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
+          <div onClick={() => navigate("/Game")} className="w-[500px] h-[450px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={ent} alt="logo" className="w-40" />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button className="text-xl font-bold bg-red-600 text-white px-4 py-2 mt-2 rounded-xl">Click</button>
             </div>
 
             <h2 className="mt-2 text-2xl font-extrabold flex items-center justify-center mb-2">Entertainment</h2>
@@ -119,10 +127,14 @@ const HomePage = () => {
           </div>
 
           {/* Indulegence  */}
-          <div  onClick={()=> navigate("/Food")} className="w-[500px] h-[400px] bg-white p-6 rounded-4xl shadow-md">
+          <div onClick={() => navigate("/Food")} className="w-[500px] h-[450px] bg-white p-6 rounded-4xl shadow-md">
 
             <div className="rounded-full object-cover flex items-center justify-center">
               <img src={foodl} alt="logo" className="w-40" />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button className="text-xl font-bold bg-red-600 text-white px-4 py-2 mt-2 rounded-xl">Click</button>
             </div>
 
             <h2 className="mt-2 text-2xl font-extrabold flex items-center justify-center mb-2">Food</h2>
@@ -134,7 +146,7 @@ const HomePage = () => {
       </div>
 
 
-        {/* photo side by side section */}
+      {/* photo side by side section */}
       <div id="Shopping" className="w-full h-screen flex">
 
         {/* LEFT SIDE IMAGE */}
@@ -160,7 +172,7 @@ const HomePage = () => {
 
       </div>
 
-      <div  id="Indulgence" className="w-full h-screen flex">
+      <div className="w-full h-screen flex">
 
 
         {/* RIGHT SIDE CONTENT */}
@@ -188,7 +200,7 @@ const HomePage = () => {
       <div className="w-full h-screen flex">
 
         {/* LEFT SIDE IMAGE */}
-        <div className="w-2/3">
+        <div id="Indulgence" className="w-2/3">
           <img
             src={image4}
             className="w-full h-full object-cover object-top"
@@ -208,7 +220,7 @@ const HomePage = () => {
         </div>
       </div>
 
-     {/* Contact us  */}
+      {/* Contact us  */}
       <div id="Contact Us" className="w-full bg-gray-400  text-black py-12 ">
 
         <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
