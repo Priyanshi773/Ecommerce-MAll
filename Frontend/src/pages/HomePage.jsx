@@ -47,18 +47,18 @@ const HomePage = () => {
 
     <div className="font-serif">
 
-      <div className="fixed w-full h-[150px] bg-stone-50 flex items-center justify-between px-6">
+      <div className="fixed w-full h-[120px] bg-stone-50 flex items-center justify-between px-6">
 
         <div className="flex items-center justify-center w-[600px]">
-          <img src={logo} alt="logo" className="h-32 w-32" />
+          <img src={logo} alt="logo" className="h-30 w-32" />
         </div>
 
-        <div className="ml-auto flex gap-10  text-black font-extrabold text-2xl pr-12 mr-14">
+        <div className="ml-auto flex gap-10  text-black font-extrabold text-xl pr-12 mr-14">
           <p onClick={() => scrollToSection("Home")} className=" hover:text-red-500 hover:underline cursor-pointer">Home</p> |
           <p onClick={() => scrollToSection("Shopping")} className=" hover:text-red-500 hover:underline cursor-pointer">Shopping</p> |
           <p onClick={() => scrollToSection("Entertainment")} className=" hover:text-red-500 hover:underline cursor-pointer">Entertainment</p> |
           <p onClick={() => scrollToSection("Indulgence")} className=" hover:text-red-500 hover:underline cursor-pointer">Indulgence</p> |
-          <p onClick={() => scrollToSection("Contact Us")} className=" hover:text-red-500 hover:underline cursor-pointer">Contact Us</p>
+          <p onClick={() => scrollToSection("Contact Us")} className=" hover:text-red-500 hover:underline cursor-pointer">Contact </p>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ const HomePage = () => {
 
       </div>
 
-      <div id="Home" className="mt-6 h-screen bg-gradient-to-b from-stone-30 via-pink-100 to-pink-200">
+      <div id="Home" className="mt-6 min-h-screen bg-gradient-to-b from-stone-30 via-pink-100 to-pink-200">
 
         <div className="mt-4 text-6xl  flex items-center justify-center font-bold">
           Ambience Malls
@@ -84,13 +84,12 @@ const HomePage = () => {
 
         <div className="mt-6 mx-[130px] text-2xl leading-9 ">
           <p><b>Ambience Malls in Gurugram and Vasant Kunj</b> are renowned as premium one-stop destinations, offering a blend of luxury, fashion, beauty, and lifestyle
-            options. With around 300 retail stores, Ambience Malls have become India's most popular shopping destinations, catering to a billion people and providing a
-            comprehensive shopping experience for the entire family. You can also enjoy at spectacular gaming zone, and other forms of entertainment that are kids and
-            adults alike. You can also head towards iSkate, PVR and cafe lounge where you can spend all day indulging in a slew of fun activities.
+            options. With around 300 retail stores,  catering to a billion people and providing a
+            comprehensive shopping experience for the entire family.
           </p>
         </div>
 
-        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-25">
+        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-4 mb-4">
 
           {/* Shopping */}
           <div onClick={() => navigate("/Dresses")} className="w-[500px] h-[450px] bg-white  p-6 rounded-4xl shadow-md">
@@ -147,13 +146,13 @@ const HomePage = () => {
 
 
       {/* photo side by side section */}
-      <div id="Shopping" className="w-full h-screen flex">
+      <div id="Shopping" className="w-full h-screen flex mt-4 ">
 
         {/* LEFT SIDE IMAGE */}
-        <div className="w-2/3">
+        <div className="w-1/2">
           <img
             src={image2}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full  object-cover object-top"
           />
         </div>
 

@@ -70,7 +70,7 @@ const Dominos = () => {
 
                 {/* Card 1 */}
                 <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza1} className="w-full h-2/3 object-cover" />
+                    <img src={pizza1} className="w-full h-500px object-cover" />
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">VEG EXTRAVAGANZA</h2>
                         <p className="text-gray-800 "> Veg Extravaganza is a highly popular, fully loaded vegetarian pizza
@@ -87,12 +87,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza1", "Veg Extravaganza", 309)
                                     }
-                                    className="mt-15 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-8 mb-2 flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-6  px-10 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza1")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
@@ -110,7 +110,7 @@ const Dominos = () => {
 
                 {/* Card 2 */}
                 <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza2} className="w-full h-2/3 object-cover" />
+                    <img src={pizza2} className="w-full h-500px object-cover" />
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">FARM HOUSE</h2>
                         <p className="text-gray-800 "> A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy,
@@ -125,12 +125,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza2", "FARM HOUSE", 350)
                                     }
-                                    className="mt-10 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-10 flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-6  px-10 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza2")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
@@ -147,9 +147,9 @@ const Dominos = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza3} className="w-full h-2/3 object-cover" />
-                    <div className="p-4">
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black flex flex-col">
+                    <img src={pizza3} className="w-full h-500px object-cover" />
+                    <div className="p-4 flex flex-col flex-1">
                         <h2 className="text-2xl font-bold">DELUXE VEGGIE</h2>
                         <p className="text-gray-800 "> For a vegetarian looking for a BIG treat that goes easy on the spices,
                             this one's got it all.. The onions, the capsicum,
@@ -164,12 +164,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza3", "DELUXE VEGGIE", 400)
                                     }
-                                    className="mt-10 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-5 mb-2 flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-6  px-1 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza3")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
@@ -186,7 +186,7 @@ const Dominos = () => {
                 </div>
 
                 <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza4} className="w-full h-2/3 object-cover" />
+                    <img src={pizza4} className="w-full h-500px object-cover" />
                     <div className="p-4">
                         <h2 className="text-2xl font-bold">Mexican Green Wave</h2>
                         <p className="text-gray-800 ">A pizza loaded with crunchy onions, crisp capsicum,
@@ -201,12 +201,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza4", "Mexican Green Wave", 399)
                                     }
-                                    className="mt-15 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-15 flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-6  px-10 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza4")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
@@ -222,9 +222,9 @@ const Dominos = () => {
                     </div>
                 </div>
 
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza5} className="w-full h-2/3 object-cover" />
-                    <div className="p-4">
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black flex flex-col">
+                    <img src={pizza5} className="w-full h-500px object-cover" />
+                    <div className="p-4 flex flex-col flex-1">
                         <h2 className="text-2xl font-bold">CHEESE N CORN</h2>
                         <p className="text-gray-800 "> Topped with shredded, crunchy green capsicum (bell peppers)
                             and liquid creamy cheese on a regular crust.</p>
@@ -238,12 +238,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza5", "CHEESE N CORN", 450)
                                     }
-                                    className="mt-15 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-auto flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-auto  px-10 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza5")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
@@ -260,9 +260,9 @@ const Dominos = () => {
                 </div>
 
 
-                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black">
-                    <img src={pizza6} className="w-full h-2/3 object-cover object-center" />
-                    <div className="p-4">
+                <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-95 transition border border-b-black flex flex-col">
+                    <img src={pizza6} className="w-full h-500x object-cover " />
+                    <div className="p-4 flex flex-col flex-1">
                         <h2 className="text-2xl font-bold">VEGGIE PARADISE</h2>
                         <p className="text-gray-800 "> Topped with shredded, goldern Corn, Black Olives, Capsicum & Red Paprika crunchy green capsicum
                             and liquid creamy cheese on a regular crust.</p>
@@ -276,12 +276,12 @@ const Dominos = () => {
                                     onClick={() =>
                                         addItem("pizza6", "VEGGIE PARADISE", 549)
                                     }
-                                    className="mt-10 flex items-center justify-center px-10 py-4 w-full text-xl font-bold text-amber-900 border rounded-lg"
+                                    className="mt-auto flex items-center justify-center px-10 py-2 w-full text-xl font-bold text-amber-900 border rounded-lg"
                                 >
                                     Add +
                                 </button>
                             ) : (
-                                <div className="mt-6  px-10 py-4 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
+                                <div className="mt-auto  px-10 py-2 w-full flex items-center justify-center gap-4 bg-pink-100 rounded-lg">
                                     <button onClick={() => decrease("pizza6")} className="w-10 h-10 flex items-center justify-center bg-pink-200 rounded-md text-lg font-bold gap-5"> - </button>
 
                                     <span className="text-xl font-bold">
