@@ -16,13 +16,13 @@ export const ZARA = () => {
 
   const [toast, setToast] = useState(false);
   const [message, setMessage] = useState("");
-  const [cart , setCart] = useState(0);
+  const [cart, setCart] = useState(0);
 
   const { addToCart } = useCart();
 
   const handleAddToCart = (item) => {
     addToCart(item);
-    setCart(cart+1);
+    setCart(cart + 1);
     showToast("added to cart");
   }
 
@@ -44,7 +44,7 @@ export const ZARA = () => {
       </h1>
 
       <div onClick={() => navigate("/Cart")}
-      className="fixed top-8 right-8 cursor-pointer ">
+        className="fixed top-8 right-8 cursor-pointer ">
         <FaShoppingCart className="text-5xl text-black" />
         {cart > 0 && (
           <span className="absolute -top-2 -right-2 bg-red-600 text-white text-sm px-2 rounded-full">
@@ -74,16 +74,17 @@ export const ZARA = () => {
               $3950
             </p>
 
-            <button 
-           onClick={() =>
-                         handleAddToCart({
-                           id: 1,
-                           name: "✨ Red Chic Party Dress",
-                           price: 3950,
-                           image: dress1,
-                         })
-                       }
-            className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button
+              onClick={() =>
+                handleAddToCart({
+                  id: 7,
+                  name: "✨ Red Chic Party Dress",
+                  price: 3950,
+                  image: dress1,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -109,16 +110,17 @@ export const ZARA = () => {
               $2950
             </p>
 
-            <button 
-             onClick={() =>
-                         handleAddToCart({
-                           id: 2,
-                           name: "💃 White Evening Dress",
-                           price: 2950,
-                           image: dress2,
-                         })
-                       }
-             className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button
+              onClick={() =>
+                handleAddToCart({
+                  id: 8,
+                  name: "💃 White Evening Dress",
+                  price: 2950,
+                  image: dress2,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -145,15 +147,16 @@ export const ZARA = () => {
             </p>
 
             <button
-               onClick={() =>
-                         handleAddToCart({
-                           id: 3,
-                           name: "🎀 Red Midi Dress",
-                           price: 2999,
-                           image: dress3,
-                         })
-                       }
-             className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+              onClick={() =>
+                handleAddToCart({
+                  id: 9,
+                  name: "🎀 Red Midi Dress",
+                  price: 2999,
+                  image: dress3,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -180,16 +183,17 @@ export const ZARA = () => {
               $4950
             </p>
 
-            <button 
-             onClick={() =>
-                         handleAddToCart({
-                           id: 4,
-                           name: "🌟 Long Gown Dress",
-                           price: 4950,
-                           image: dress4,
-                         })
-                       } 
-             className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button
+              onClick={() =>
+                handleAddToCart({
+                  id: 10,
+                  name: "🌟 Long Gown Dress",
+                  price: 4950,
+                  image: dress4,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -215,16 +219,17 @@ export const ZARA = () => {
               $1999
             </p>
 
-            <button 
+            <button
               onClick={() =>
-                         handleAddToCart({
-                           id: 5,
-                           name: "🌹 Net Black Dress",
-                           price: 1999,
-                           image: dress5,
-                         })
-                       }
-             className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+                handleAddToCart({
+                  id: 11,
+                  name: "🌹 Net Black Dress",
+                  price: 1999,
+                  image: dress5,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>
@@ -250,16 +255,17 @@ export const ZARA = () => {
               $4599
             </p>
 
-            <button 
-             onClick={() =>
-                         handleAddToCart({
-                           id: 6,
-                           name: "☀️ Printed Dress",
-                           price: 4599,
-                           image: dress6,
-                         })
-                       }
-             className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
+            <button
+              onClick={() =>
+                handleAddToCart({
+                  id: 12,
+                  name: "☀️ Printed Dress",
+                  price: 4599,
+                  image: dress6,
+                  brand: "zara",
+                })
+              }
+              className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
               <FaShoppingCart className="text-lg" />
               Add to Cart
             </button>

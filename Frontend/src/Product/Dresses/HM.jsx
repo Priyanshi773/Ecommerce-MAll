@@ -82,6 +82,7 @@ export const HM = () => {
                 name: "Cotton Dress",
                 price: 999,
                 image: hm1,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
@@ -116,6 +117,7 @@ export const HM = () => {
                 name: " 🌷 Wrap Dress",
                 price: 1599,
                 image: hm2,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
@@ -151,6 +153,7 @@ export const HM = () => {
                 name: " ✨ Satin Midi Dress ",
                 price: 1299,
                 image: hm3,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
@@ -185,6 +188,7 @@ export const HM = () => {
                 name: "  👚 Printed Casual Top ",
                 price: 999,
                 image: hm4,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
@@ -219,6 +223,7 @@ export const HM = () => {
                 name: " 🎀 Puff Sleeve Top  ",
                 price: 799,
                 image: hm5,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">
@@ -253,6 +258,7 @@ export const HM = () => {
                 name: " ☀️ Sleeveless Summer Dress",
                 price: 1999,
                 image: hm6,
+                brand: "h&m",
               })
             }
               className="mt-auto flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg bg-gray-800 transition">

@@ -46,6 +46,9 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const clearcart = () => {
+    setCartItems([]);
+  }
   // 💾 localStorage save (simple way same like yours)
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
@@ -53,7 +56,7 @@ export const CartProvider = ({ children }) => {
 
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, decreaseQty, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, decreaseQty, removeFromCart, clearcart }}>
       {children}
     </CartContext.Provider>
   );
