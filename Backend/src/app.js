@@ -1,6 +1,7 @@
 import express from "express";
 import authRouter from "./routes/auth.routes.js";
 import otpRouter from "./routes/otp.routes.js";
+import adminRouter from "./routes/admin.routes.js"
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
@@ -19,5 +20,6 @@ app.use(cors({
 // routes
 app.use("/api/auth", authRouter);
 app.use("/api/auth/otp", otpRouter);
+app.use("/api/admin", adminRouter);
 
 export default app;

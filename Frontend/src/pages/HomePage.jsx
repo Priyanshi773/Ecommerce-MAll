@@ -32,7 +32,7 @@ const HomePage = () => {
 
       alert(res.data.message || "Logged out");
 
-      navigate("/LoginPage");
+      navigate("/");
 
     } catch (err) {
       console.log("Logout Error:", err.response?.data);
@@ -59,6 +59,7 @@ const HomePage = () => {
           <p onClick={() => scrollToSection("Entertainment")} className=" hover:text-red-500 hover:underline cursor-pointer">Entertainment</p> |
           <p onClick={() => scrollToSection("Indulgence")} className=" hover:text-red-500 hover:underline cursor-pointer">Indulgence</p> |
           <p onClick={() => scrollToSection("Contact Us")} className=" hover:text-red-500 hover:underline cursor-pointer">Contact </p>
+          <button onClick={logout} className="bg-blue-600 text-white px-2 py-1 rounded-xl "> Logout </button>
         </div>
       </div>
 
@@ -89,7 +90,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-4 mb-4">
+        <div className="w-[90%] mx-auto flex justify-between gap-4 mt-28 mb-4">
 
           {/* Shopping */}
           <div onClick={() => navigate("/Dresses")} className="w-[500px] h-[450px] bg-white  p-6 rounded-4xl shadow-md">

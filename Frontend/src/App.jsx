@@ -16,6 +16,7 @@ import Arcade from "./Product/Game/Arcade";
 import Vr from "./Product/Game/Vr";
 import Cart from "./Product/Dresses/Cart";
 import { CartProvider } from "./Product/Dresses/CartContext";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
       <Route path="/Arcade" element={<Arcade/>} />
       <Route path="/VR" element={<Vr/>} />
       <Route path="/Cart" element={<Cart/>} />
+
+<Route path="/admin" element={<Admin/>}/>
   
     </Routes>
     </CartProvider>

@@ -1,37 +1,46 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
-const CartContext = createContext();   //empty bag 
+const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 
-  //local storage logic 
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const getKey = (item) => item.id || item._id;
+
+  // localStorage load (user-wise)
   const [cartItems, setCartItems] = useState(() => {
-    const savedCart = localStorage.getItem("cart");
+    if (!user) return [];
+
+    const savedCart = localStorage.getItem(`cart_${user._id}`);
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  //add tcart logic 
+  // ADD TO CART
   const addToCart = (item) => {
-    setCartItems((prev) => {
-      const exisiting = prev.find((p) => p.id === item.id);
+    const key = getKey(item);
 
-      if (exisiting) {
+    setCartItems((prev) => {
+      const existing = prev.find((p) => p.cartKey === key);
+
+      if (existing) {
         return prev.map((p) =>
-          p.id === item.id
+          p.cartKey === key
             ? { ...p, quantity: p.quantity + 1 }
             : p
         );
       }
 
-      return [...prev, { ...item, quantity: 1 }];
+      return [...prev, { ...item, quantity: 1, cartKey: key }];
     });
   };
 
+  // DECREASE QTY
   const decreaseQty = (id) => {
     setCartItems((prev) =>
       prev
         .map((item) =>
-          item.id === id
+          item.cartKey === id
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
@@ -39,24 +48,42 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  //remove cart logic 
+  // REMOVE ITEM
   const removeFromCart = (id) => {
     setCartItems((prev) =>
-      prev.filter((item) => item.id !== id)
+      prev.filter((item) => item.cartKey !== id)
     );
   };
 
+  // CLEAR CART
   const clearcart = () => {
     setCartItems([]);
-  }
-  // 💾 localStorage save (simple way same like yours)
+
+    if (user) {
+      localStorage.removeItem(`cart_${user._id}`);
+    }
+  };
+
+  // SAVE TO LOCALSTORAGE
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
+    if (user) {
+      localStorage.setItem(
+        `cart_${user._id}`,
+        JSON.stringify(cartItems)
+      );
+    }
   }, [cartItems]);
 
-
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, decreaseQty, removeFromCart, clearcart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        decreaseQty,
+        removeFromCart,
+        clearcart
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
