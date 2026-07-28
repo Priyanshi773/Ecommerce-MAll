@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import API from "../Api.jsx";
 import logo from "../assets/malllogo.png";
 import image1 from "../assets/image1.png";
 import shop1 from "../assets/shop1.png";
@@ -28,7 +28,7 @@ const HomePage = () => {
 
   const logout = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/logout");
+      const res = await API.post("/auth/logout");
 
       alert(res.data.message || "Logged out");
 

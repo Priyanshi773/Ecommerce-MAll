@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../Api.jsx";
 
 function Admin() {
 
@@ -10,7 +10,7 @@ function Admin() {
 
     // 🔥 FETCH USERS
     useEffect(() => {
-        axios.get("http://localhost:3000/api/admin/users")
+        API.get("/admin/users")
             .then((res) => {
                 setUsers(res.data.users || res.data || []);
             })
