@@ -13,7 +13,10 @@ app.use(cookieParser());
 
 // CORS (after app is created)
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin : [
+   "http://localhost:5173",
+  "https://ecommerce-m-all-dusky.vercel.app" 
+  ],
   credentials: true
 }));
 
