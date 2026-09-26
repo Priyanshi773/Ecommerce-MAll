@@ -36,16 +36,16 @@ export const ZARA = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-6">
+    <div className="min-h-screen bg-gray-100 py-10 px-4 md:px-6">
 
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-10">
         ZARA Dresses Collection 👗
       </h1>
 
       <div onClick={() => navigate("/Cart")}
-        className="fixed top-8 right-8 cursor-pointer ">
-        <FaShoppingCart className="text-5xl text-black" />
+        className="fixed top-8 right-8 cursor-pointer z-40">
+        <FaShoppingCart className="text-3xl md:text-5xl text-black" />
         {cart > 0 && (
           <span className="absolute -top-2 -right-2 bg-red-600 text-white text-sm px-2 rounded-full">
             {cart}
@@ -53,24 +53,24 @@ export const ZARA = () => {
         )}
       </div>
       {/* Grid */}
-      <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="px-0 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
 
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress1} className="w-full h-96 object-cover object-top" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress1} className="w-full h-72 md:h-96 object-cover object-top" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               ✨ Red Chic Party Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.8</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $3950
             </p>
 
@@ -92,21 +92,21 @@ export const ZARA = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress2} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress2} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               💃White Evening Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.2</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $2950
             </p>
 
@@ -128,21 +128,21 @@ export const ZARA = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress3} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress3} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               🎀 Red Midi Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.4</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $2999
             </p>
 
@@ -165,21 +165,21 @@ export const ZARA = () => {
 
 
         {/* Card 4 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress4} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress4} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               🌟 Long Gown Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.6</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $4950
             </p>
 
@@ -201,21 +201,21 @@ export const ZARA = () => {
         </div>
 
         {/* Card 5 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress5} className="w-full h-96 object-cover object-top" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress5} className="w-full h-72 md:h-96 object-cover object-top" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               🌹 Net Black Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.2</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $1999
             </p>
 
@@ -237,21 +237,21 @@ export const ZARA = () => {
         </div>
 
         {/* Card 6*/}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={dress6} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={dress6} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               ☀️ Printed Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>5.0</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $4599
             </p>
 
@@ -276,7 +276,7 @@ export const ZARA = () => {
 
       {toast && (
         <div
-          className="fixed bottom-5 right-5 bg-black text-white px-10 py-5 rounded-lg shadow-lg z-50"
+          className="fixed bottom-5 right-5 bg-black text-white px-6 md:px-10 py-3 md:py-5 rounded-lg shadow-lg z-50 text-sm md:text-base"
         >
           {message}
         </div>

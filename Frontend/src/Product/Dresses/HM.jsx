@@ -21,11 +21,10 @@ export const HM = () => {
   const { addToCart } = useCart();
 
   const handleAddToCart = (item) => {
-    addToCart(item);   // context wala
-    setCart(cart + 1); // badge count
+    addToCart(item);
+    setCart(cart + 1);
     showToast("added to cart 🛍️");
   };
-
 
   const showToast = (msg) => {
     setMessage(msg);
@@ -36,18 +35,17 @@ export const HM = () => {
     }, 2000);
   };
 
-
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-6">
+    <div className="min-h-screen bg-gray-100 py-10 px-4 md:px-6">
 
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-10">
         H&M Dresses Collection 👗
       </h1>
 
       <div onClick={() => navigate("/Cart")}
-        className="fixed top-8 right-8 cursor-pointer ">
-        <FaShoppingCart className="text-5xl text-black" />
+        className="fixed top-8 right-8 cursor-pointer z-40">
+        <FaShoppingCart className="text-3xl md:text-5xl text-black" />
         {cart > 0 && (
           <span className="absolute -top-2 -right-2 bg-red-600 text-white text-sm px-2 rounded-full">
             {cart}
@@ -55,24 +53,24 @@ export const HM = () => {
         )}
       </div>
       {/* Grid */}
-      <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
+      <div className="px-0 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
 
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={hm1} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm1} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               Cotton Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.8</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $999
             </p>
 
@@ -93,21 +91,21 @@ export const HM = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={hm2} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm2} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               🌷 Wrap Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>5.0</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $1599
             </p>
 
@@ -127,23 +125,22 @@ export const HM = () => {
           </div>
         </div>
 
-
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black">
-          <img src={hm3} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm3} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               ✨ Satin Midi Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.6</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $1299
             </p>
 
@@ -164,21 +161,21 @@ export const HM = () => {
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={hm4} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm4} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               👚 Printed Casual Top
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.1</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $999
             </p>
 
@@ -199,21 +196,21 @@ export const HM = () => {
         </div>
 
         {/* Card 5*/}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black">
-          <img src={hm5} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm5} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               🎀 Puff Sleeve Top
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.2</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $799
             </p>
 
@@ -234,21 +231,21 @@ export const HM = () => {
         </div>
 
         {/* Card 6 */}
-        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-[450px] h-[600px] border border-black ">
-          <img src={hm6} className="w-full h-96 object-cover object-bottom" />
+        <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition w-full border border-black">
+          <img src={hm6} className="w-full h-72 md:h-96 object-cover object-bottom" />
 
           <div className="p-5 flex flex-col gap-3">
 
-            <p className="font-bold text-2xl">
+            <p className="font-bold text-xl md:text-2xl">
               ☀️ Sleeveless Summer Dress
             </p>
 
-            <div className="flex items-center gap-2 text-xl font-bold">
+            <div className="flex items-center gap-2 text-lg md:text-xl font-bold">
               <FaStar className="text-yellow-500" />
               <p>4.5</p>
             </div>
 
-            <p className="text-2xl font-bold text-gray-800">
+            <p className="text-xl md:text-2xl font-bold text-gray-800">
               $1999
             </p>
 
@@ -268,14 +265,12 @@ export const HM = () => {
           </div>
         </div>
 
-
-
       </div>
 
       {/* ✅ TOAST UI */}
       {toast && (
         <div
-          className="fixed bottom-5 right-5 bg-black text-white px-10 py-5 rounded-lg shadow-lg z-50"
+          className="fixed bottom-5 right-5 bg-black text-white px-6 md:px-10 py-3 md:py-5 rounded-lg shadow-lg z-50 text-sm md:text-base"
         >
           {message}
         </div>
