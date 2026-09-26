@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(cors({
   origin : [
    "http://localhost:5173",
-  "https://ecommerce-m-all-dusky.vercel.app" 
+  "https://ecommerce-mall-final.onrender.com" 
   ],
   credentials: true
 }));
